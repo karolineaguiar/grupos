@@ -1,0 +1,93 @@
+
+body{
+    background-color: #E1F0CF; 
+    font-family:ui-sans-serif;
+    font-size:20px;
+}
+.a{
+    background-color: #E1F0CF; 
+    font-size:20px;
+    color:#245739;
+}
+ h1{
+    font-size: 20px;
+    color:#245739;
+    text-align:center;
+    padding-top:15px;
+    margin-bottom:4px;
+}
+.m-5{
+    background-color:#ade2b1;
+    color:#245739;
+    text-align:center;
+    max-width:300px;
+    height:130px;
+    border-radius: 10px;
+    font-weight:bolder;
+    font-style:italic;
+
+}
+
+a{
+    padding-top:15px;
+    margin-bottom:5px;
+    font-size:20px;
+    text-align:center;
+}
+    
+h3{
+   padding-top:10px;
+   color:#245739;
+   margin-bottom:15px;
+   font-weight:normal;
+   text-align:center;
+   font-weight:bolder;
+   font-size: 20px;
+
+    }
+h4{
+    background-color: #E1F0CF; 
+    color:#245739;
+    font-weight:bolder;
+    margin: 0px;
+    padding:2px;
+    text-align:center;
+
+   }
+
+table{
+    background-color:#8DC792;
+    font-size:20px;
+    text-align:center;
+    left:50px;
+    margin:-130px 0 0 - 210px;
+    border-collapse:separate;
+}
+
+thead{
+        background-color: #629166;
+    font-size:20px;
+}
+
+tbody > tr:nth-child(2n) {
+    background-color: #629166;
+}
+.card-header{
+    color:#245739;
+    background-color:#8DC792;
+    margin:0px;
+    padding:2px;
+    font-weight:bolder;
+    text-align:center;
+}
+
+form{
+    color:#245739;
+    background-color: #E1F0CF;
+    font-size:20px;
+} 
+
+.card-footer{
+    background-color: #E1F0CF;
+
+}

@@ -4,7 +4,7 @@ $id = $_GET['id'];
 $nome = $_GET['nome'];
 $tipo = $_GET['tipo'];
 $valorMercado = $_GET['valor_mercado'];
-$mensagem = 'Atualizado com sucesso';
+$mensagem = 'Atualizado com sucesso!';
 
 $conexaoBd = mysqli_connect('localhost','root','password');
 mysqli_select_db($conexaoBd, 'grupos');

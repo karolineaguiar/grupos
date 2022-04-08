@@ -22,19 +22,21 @@
                          <th>CPF</th>
                         <th>Salário</th>
                         <th>Empresa</th>
+                        <th>Função</th>
                         <th>Ações</th>
                     </tr>
-                </thead>react maniac stray kids
+                </thead>
                 <tbody>
                     <?php
                         $conexaoBd = mysqli_connect('localhost','root','password'); 
                         mysqli_select_db($conexaoBd, 'grupos');
 
-                        $buscas = "SELECT * FROM colaboradores";
+                        $buscas = "SELECT *, empresas.nome, funcoes.funcoes AS 'empresa' 'funcao' FROM colaboradores, empresas, funcoes
+                        JOIN empresas, funcoes ON colaboradores.empresa_id = empresas.id , colaboradores.funcao_id = funcao_id ";
 
-                        $colaboradores = mysqli_query($conexaoBd, $buscas);
+                        $listagens = mysqli_query($conexaoBd, $buscas);
 
-                        while($colaborador = mysqli_fetch_array($colaboradores)):
+                        while($listagem = mysqli_fetch_array($listagens)):
                     ?>
                     <tr>
                         <td><?php echo $colaborador['id'] ?></td>
@@ -42,13 +44,15 @@
                         <td><?php echo $colaborador['cpf'] ?></td>
                         <td><?php echo $colaborador['salario'] ?></td>
                         <td><?php echo $colaborador['empresa_id'] ?></td>
+                        <td><?php echo $colaborador['funcao_id']?></td>
                         <td>
                             <a href="atualizar.php?id=<?php echo $colaborador['id'] ?>" class="btn btn-warning">
                                 Atualizar
                             </a>
+                            
                             <a href="../app/colaboradores/excluir.php?id=<?php echo $colaborador['id'] ?>" class="btn btn-danger">
                                     Excluir
-                                </a>
+                            </a>
                         </td>
                     </tr>
                     <?php endwhile; ?>

@@ -41,6 +41,24 @@
                                 </option>
                         <?php endwhile; ?>
                     </select>
+
+                    <label for="">Lista de funções</label>
+                    <select name="funcao_id" class="form-control">
+                    <?php
+                            $conexaoBd = mysqli_connect('localhost','root','password'); 
+                            mysqli_select_db($conexaoBd, 'grupos');
+
+                            $buscas = "SELECT * FROM funcoes";
+
+                            $funcoes = mysqli_query($conexaoBd, $buscas);
+
+                            while($funcao = mysqli_fetch_array($funcoes)):
+                        ?>
+                        <option value="<?php  echo $funcao['id'] ?>">
+                                        <?php echo $funcao['funcoes'] ?>
+                        </option>
+                        <?php endwhile; ?>
+                    </select>
                 </div>
                 <div class="card-footer">
                     <button type="submit" class="btn btn-outline-success btn-lg">Salvar</button>                    

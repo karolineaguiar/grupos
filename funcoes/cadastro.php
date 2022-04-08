@@ -19,31 +19,14 @@
         <form action="../app/funcoes/salvar.php" method="get">
                 <div class="card-body">
                     <label for="">Função</label>
-                    <input type="text" name="funcao" class="form-control">
+                    <input type="text" name="funcoes" class="form-control">
                     <label for="">Nivel</label>
                     <select name="nivel" class="form-control">
                         <option value="1">Júnior</option>
                         <option value="2">Pleno</option>
                         <option value="3">Sênio</option>
-                    </select>   
-                    <label for="">Lista de Colaboradores</label>
-                    <select name="colaboradores_id" class="form-control">
-                            <?php
-                                    $conexaoBd = mysqli_connect('localhost','root','password'); 
-                                    mysqli_select_db($conexaoBd, 'grupos');
-
-                                    $buscas = "SELECT * FROM colaboradores";
-
-                                    $colaboradores = mysqli_query($conexaoBd, $buscas);
-
-                                    while($colaborador = mysqli_fetch_array($colaboradores)):
-                            ?>
-                                <option value="<?php echo $colaborador['id'] ?>">
-                                                <?php echo $colaborador['nome'] ?>
-                                </option>
-                            <?php endwhile; ?>
                     </select>
-                </div>
+             
             <div class="card-footer">
                 <button type="submit" class="btn btn-outline-success btn-lg">Salvar</button>                    
             </div>

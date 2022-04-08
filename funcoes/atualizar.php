@@ -21,16 +21,14 @@
                 <input type="hidden" name="id" value="<?php echo $funcao['id']; ?>">
                 <div class="card-body">
                     <label for="">Função</label>
-                    <input type="text" name="nome" class="form-control" value="<?php echo $funcao['funcao']; ?>">
+                    <input type="text" name="funcoes" class="form-control" value="<?php echo $funcao['funcoes']; ?>">
                     <label for="">Nivel</label>
                     <select name="nivel" class="form-control">
                         <option value="1" <?php echo $funcao['nivel'] == "1" ? "selected" : "" ?>>Júnior</option>
                         <option value="2" <?php echo $funcao['nivel'] == "2" ? "selected" : "" ?>>Pleno</option>
                         <option value="3" <?php echo $funcao['nivel'] == "3" ? "selected" : "" ?>>Sẽnior</option>
                     </select>
-                    <label for="">Listas de Colaboradores</label>
-                    <input type="int" name="colaboradores_id" class="form-control" value="<?php echo $funcao['colaboradores_id']; ?>">
-                </div>
+                    </div>
                 <div class="card-footer">
                     <button type="submit" class="btn btn-outline-success btn-lg">Salvar</button>                   
                 </div>

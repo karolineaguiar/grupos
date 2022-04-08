@@ -20,7 +20,6 @@
                         <th>Id</th>
                         <th>Função</th>
                         <th>Nivel</th>
-                        <th>Colaborador</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -37,7 +36,7 @@
                     ?>
                         <tr>
                             <td><?php echo $funcao['id'] ?></td>
-                            <td><?php echo $funcao['funcao'] ?></td>
+                            <td><?php echo $funcao['funcoes'] ?></td>
                             <td>
                                 <?php if ($funcao['nivel'] == "1") {  ?>
                                     Júnior
@@ -49,9 +48,7 @@
                                     Desconhecido
                                 <?php } ?>
                             </td>                          
-                            
-                            <td><?php echo $funcao['colaboradores_id'] ?></td>
-
+                        
                             <td>
                                 <a href="atualizar.php?id=<?php echo $funcao['id'] ?>" class="btn btn-warning">
                                     Atualizar

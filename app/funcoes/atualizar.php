@@ -1,9 +1,8 @@
 <?php
 
 $id = $_GET['id'];
-$funcao = $_GET['funcao'];
+$funcoes = $_GET['funcoes'];
 $nivel = $_GET['nivel'];
-$colaboradoresId = $_GET['colaboradores_id'];
 $mensagem = 'atualizado com sucesso';
 
 $conexaoBd = mysqli_connect('localhost','root','password');
@@ -11,7 +10,7 @@ mysqli_select_db($conexaoBd, 'grupos');
 
 $atualizacao = 'UPDATE `funcoes`
 SET
-    funcao = "'.$funcao.'", nivel = "'.$nivel.'", colaboradores_id = "'.$colaboradoresId.'"
+    funcao = "'.$funcoes.'", nivel = "'.$nivel.'"
 WHERE id = "'.$id.'"
 ';
 

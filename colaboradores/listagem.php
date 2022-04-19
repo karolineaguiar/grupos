@@ -31,12 +31,12 @@
                         $conexaoBd = mysqli_connect('localhost','root','password'); 
                         mysqli_select_db($conexaoBd, 'grupos');
 
-                        $buscas = "SELECT *, empresas.nome, funcoes.funcoes AS 'empresa' 'funcao' FROM colaboradores, empresas, funcoes
-                        JOIN empresas, funcoes ON colaboradores.empresa_id = empresas.id , colaboradores.funcao_id = funcao_id ";
+                        $buscas = "SELECT * colaboradores , empresas.nome, funcoes.funcoes AS empresa, funcao FROM colaboradores, empresas, funcoes
+                        JOIN empresas, funcoes ON colaboradores.empresa_id = empresas.id , colaboradores.funcao_id = funcoes_id ";
+                        
+                        $colaboradores = mysqli_query($conexaoBd, $buscas);
 
-                        $listagens = mysqli_query($conexaoBd, $buscas);
-
-                        while($listagem = mysqli_fetch_array($listagens)):
+                        while($colaborador = mysqli_fetch_array($colaboradores)):
                     ?>
                     <tr>
                         <td><?php echo $colaborador['id'] ?></td>
